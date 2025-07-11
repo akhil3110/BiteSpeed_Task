@@ -149,7 +149,7 @@ export default function FlowBuilder() {
       </div>
       {selectedNode && (
         <SettingsPanel
-          // @ts-ignore: no check
+          //@ts-expect-error: no check
           label={selectedNode.data.label}
           onChange={updateNodeLabel}
           onClose={() => setSelectedNode(null)} // ✅ Close panel
