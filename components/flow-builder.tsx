@@ -91,6 +91,7 @@ export default function FlowBuilder() {
   }, []);
 
   // on node click trigerred when we edit text in node and setting panel comes
+  //@ts-expect-error skip error
   const onNodeClick = (_: any, node: Node) => {
     setSelectedNode(node);
   };
