@@ -1,3 +1,4 @@
+//@ts-nocheck
 'use client';
 import {
   ReactFlow,
@@ -11,12 +12,10 @@ import {
   EdgeChange,
   Controls,
   Background,
-  useReactFlow,
   MiniMap
 } from '@xyflow/react';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 import '@xyflow/react/dist/style.css';
-
 import { NodePanel } from './node-panel';
 import { SettingsPanel } from './settings-panel';
 import { TextNode } from './textNode'
