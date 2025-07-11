@@ -1,6 +1,5 @@
 'use client';
 
-import { Separator } from "@radix-ui/react-separator";
 import { MoveLeft } from "lucide-react";
 
 export function SettingsPanel({
