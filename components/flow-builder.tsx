@@ -90,7 +90,7 @@ export default function FlowBuilder() {
   }, []);
 
   // on node click trigerred when we edit text in node and setting panel comes
-  const onNodeClick = (_: any, node: Node) => {
+  const onNodeClick = (event:React.MouseEvent , node: Node) => {
     setSelectedNode(node);
   };
 
