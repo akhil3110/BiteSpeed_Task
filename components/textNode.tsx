@@ -1,11 +1,11 @@
-//@ts-nocheck
 'use client';
-import { Handle, Position } from '@xyflow/react';
+import { Handle, Position, NodeProps } from '@xyflow/react';
 import { MessageSquareText } from 'lucide-react';
 import Image from 'next/image';
 
 
-export function TextNode({ data }: any) {
+
+export function TextNode({ data }: NodeProps) {
   return (
     <div className="border bg-white rounded shadow text-sm w-40">
       <Handle type="target" position={Position.Left} />
@@ -16,7 +16,7 @@ export function TextNode({ data }: any) {
         </div>
         <Image src={"/WhatsApp.svg.webp"} width={12} height={5} alt='' />
       </div>
-      <div className='p-1'>{data.label}</div>
+      <div className='p-1'>{(data.label as string)}</div>
       <Handle type="source" position={Position.Right} />
     </div>
   );
