@@ -1,5 +1,8 @@
 'use client';
 
+import { Separator } from "@radix-ui/react-separator";
+import { MoveLeft } from "lucide-react";
+
 export function SettingsPanel({
   label,
   onChange,
@@ -10,21 +13,28 @@ export function SettingsPanel({
   onClose: () => void;
 }) {
   return (
-    <aside className="p-4 w-64 bg-gray-100 border-l flex flex-col">
-      <button
-        onClick={onClose}
-        className="mb-4 text-blue-600 underline text-left text-sm"
-      >
-        ← Back to Nodes Panel
-      </button>
+    <div className="w-80 bg-white border-l flex flex-col transition">
+      <div className="flex justify-center w-full relative p-4 border-1 border-[#E1E1E1]">
+        <button
+          onClick={onClose}
+          className="mb-4 underline text-left text-sm absolute left-0"
+        >
+          <MoveLeft  className="w-4 ml-5 cursor-pointer"/>
+        </button>
+        <div className="font-bold text-left">
+          Message
+        </div>
+      </div>
 
-      <p className="font-bold mb-2">Settings</p>
-      <textarea
-        className="w-full p-2 border rounded"
-        value={label}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder="Enter message text"
-      />
-    </aside>
+      <div className="px-2 py-8 border-1 border-[#E1E1E1]">
+        <p className="font-light te mb-4">Text</p>
+        <textarea
+          className="w-full p-2 border rounded"
+          value={label}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="Enter message text"
+        />
+      </div>
+    </div>
   );
 }
