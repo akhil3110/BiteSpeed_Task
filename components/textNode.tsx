@@ -3,7 +3,8 @@ import { Handle, Position, NodeProps } from '@xyflow/react';
 import { MessageSquareText } from 'lucide-react';
 import Image from 'next/image';
 
-export function TextNode({ data }: NodeProps) {
+
+export function TextNode({ data }: any) {
   return (
     <div className="border bg-white rounded shadow text-sm w-40">
       <Handle type="target" position={Position.Left} />
