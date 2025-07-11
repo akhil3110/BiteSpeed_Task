@@ -16,6 +16,7 @@ export function NodePanel() {
       >
         Message Node
       </div>
+      <p className="text-xs mt-5 font-light">Drag To add in grid</p>
     </aside>
   );
 }
