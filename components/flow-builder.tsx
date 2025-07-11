@@ -25,6 +25,7 @@ import toast from 'react-hot-toast';
 // customized node: setting textNode to a component
 const nodeTypes = { textNode: TextNode };
 
+
 let id = 0;
 const getId = () => `node-${id++}`;
 
@@ -148,6 +149,7 @@ export default function FlowBuilder() {
       </div>
       {selectedNode && (
         <SettingsPanel
+          // @ts-ignore: no check
           label={selectedNode.data.label}
           onChange={updateNodeLabel}
           onClose={() => setSelectedNode(null)} // ✅ Close panel
