@@ -12,7 +12,7 @@ export function SettingsPanel({
   onClose: () => void;
 }) {
   return (
-    <div className="w-80 bg-white border-l flex flex-col transition">
+    <div className="w-72 bg-white border-l flex flex-col transition">
       <div className="flex justify-center w-full relative p-4 border-1 border-[#E1E1E1]">
         <button
           onClick={onClose}

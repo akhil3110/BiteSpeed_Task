@@ -154,6 +154,7 @@ export default function FlowBuilder() {
           label={selectedNode.data.label}
           onChange={updateNodeLabel}
           onClose={() => setSelectedNode(null)} // ✅ Close panel
+          classname = "transition"
         />
       )}
     </div>
