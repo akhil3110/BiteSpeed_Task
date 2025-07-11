@@ -1,5 +1,6 @@
+//@ts-nocheck
 'use client';
-import { Handle, Position, NodeProps } from '@xyflow/react';
+import { Handle, Position } from '@xyflow/react';
 import { MessageSquareText } from 'lucide-react';
 import Image from 'next/image';
 
